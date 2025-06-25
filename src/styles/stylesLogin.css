@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/asset/images/ben-scott-bCnM5P0gcpY-unsplash.jpg') no-repeat;
+    background: url('/src/images/ben-scott-bCnM5P0gcpY-unsplash.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
