@@ -1,15 +1,20 @@
 import { useState } from 'react'
 import './styles/index.css'
+import User from './pages/user.jsx'
+import Producto from './pages/producto.jsx'
 import Login from './pages/login.jsx'
-// import Producto from './pages/producto.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentPage, setCurrentPage] = useState('login')
+
+  let content = null
+  if (currentPage === 'login') content = <Login setCurrentPage={setCurrentPage} />
+  else if (currentPage === 'productos') content = <Producto />
+  else if (currentPage === 'user') content = <User />
 
   return (
     <>
-      <Login /> {/* cambiar esta linea para probar otras paginas */}
-      {/* <Producto /> */}
+      {content}
     </>
   )
 }

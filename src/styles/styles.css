@@ -16,10 +16,14 @@
     align-items: center;
     position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     height: var(--header-height);
-    background-color: rgba(63, 46, 46, 0.92); /* Un poco más oscuro que blanco, pero no negro */
-    transition: background var(--default-duration) ease;
     z-index: 1000;
+    background: rgba(40, 44, 52, 0.7); /* Más claro y translúcido */
+    transition: background var(--default-duration) ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    backdrop-filter: blur(4px);
 }
 
 .header__container {
@@ -49,6 +53,8 @@
 
 .header__link a {
     position: relative;
+    color: #2a6edb;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.2);
 }
 
 .header__link a::after {
@@ -67,6 +73,10 @@
 .header__link a.active::after {
     bottom: -5px;
     opacity: 1;
+}
+
+.header__link a.active {
+    color: #1a4a8a;
 }
 
 .container-icon {
@@ -766,6 +776,17 @@
     opacity: 1;
     pointer-events: all;
     z-index: 500;
+}
+
+.main-content {
+    margin-top: 80px; /* Altura del header, ajustar si es necesario */
+}
+
+/* Opcional: para evitar que el header tape el contenido en pantallas pequeñas */
+@media (max-width: 600px) {
+  .main-content {
+    margin-top: 110px;
+  }
 }
 
 
