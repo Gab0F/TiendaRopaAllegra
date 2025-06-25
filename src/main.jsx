@@ -5,7 +5,7 @@ import './styles/index.css'
 import App from './App.jsx'
 import Cart from './pages/cart.jsx'
 import Checkout from './pages/checkout.jsx'
-
+import Login from './pages/login.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -13,6 +13,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
