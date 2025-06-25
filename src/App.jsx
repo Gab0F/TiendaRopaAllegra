@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import Cart from './pages/cart.jsx'
-
 import './styles/index.css'
+import Login from './pages/login.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +8,7 @@ function App() {
   return (
     <>
 
-      <Cart /> {/* cambiar esta linea para probar otras paginas */}
+      <Login /> {/* cambiar esta linea para probar otras paginas */}
     </>
   )
 }
