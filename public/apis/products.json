@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "the north face jacket",
+        "trendTitle": "Lorem ipsum dolor",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ratione sint, minima itaque maxime facilis necessitatibus aliquam veritatis, possimus sapiente esse aspernatur atque harum laboriosam consequatur quam pariatur, doloremque expedita.",
+        "price": 309.99,
+        "image": "src/images/sirio-7_ZNLVlJchs-unsplash.jpg",
+        "image2": "src/images/sirio-7_ZNLVlJchs-unsplash.jpg",
+        "image3": "src/images/sirio-7_ZNLVlJchs-unsplash.jpg",
+        "isNew": true,
+        "isTrending": false,
+        "category": "men",
+        "link": "/productDress.html"
+    },
+    {
+        "id": 2,
+        "title": "brown coat",
+        "trendTitle": "Lorem ipsum dolor",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ratione sint, minima itaque maxime facilis necessitatibus aliquam veritatis, possimus sapiente esse aspernatur atque harum laboriosam consequatur quam pariatur, doloremque expedita.",
+        "price": 199.99,
+        "image": "src/images/engin-akyurt-mSxZ-VZxJ3Y-unsplash.jpg",
+        "image2": "src/images/engin-akyurt-mSxZ-VZxJ3Y-unsplash.jpg",
+        "image3": "src/images/engin-akyurt-mSxZ-VZxJ3Y-unsplash.jpg",
+        "isNew": false,
+        "isTrending": true,
+        "category": "women",
+        "link": "/productDress.html"
+    }
+]
