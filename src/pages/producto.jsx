@@ -152,87 +152,90 @@ export default function ProductDress() {
         </nav>
       </header>
 
-      {/* Product details */}
-      <section id="container-product">
-        <div className="product-details">
-          <div className="gallery">
-            {images.length > 0 && (
-              <>
-                <img
-                  src={images[imgIndex]}
-                  alt={product?.title}
-                  id="productImg"
-                />
-                <div className="controls">
-                  {images.map((img, idx) => (
-                    <span
-                      key={idx}
-                      className={`btn${
-                        imgIndex === idx ? " active" : ""
-                      }`}
-                      onClick={() => handleImgChange(idx)}
-                    ></span>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
-          <div className="details-p notfound-bg">
-            <div className="details-products">
-              {product && (
+      {/* Contenido principal */}
+      <div className="main-content">
+        {/* Product details */}
+        <section id="container-product">
+          <div className="product-details">
+            <div className="gallery">
+              {images.length > 0 && (
                 <>
-                  <h1>{product.title}</h1>
-                  <h2>$ {product.price}</h2>
-                  <h3>20% OFF</h3>
-                  <p>{product.description}</p>
+                  <img
+                    src={images[imgIndex]}
+                    alt={product?.title}
+                    id="productImg"
+                  />
+                  <div className="controls">
+                    {images.map((img, idx) => (
+                      <span
+                        key={idx}
+                        className={`btn${
+                          imgIndex === idx ? " active" : ""
+                        }`}
+                        onClick={() => handleImgChange(idx)}
+                      ></span>
+                    ))}
+                  </div>
                 </>
               )}
             </div>
-            <form>
-              <div className="size-select">
-                <p>Size</p>
-                {["XS", "S", "M", "L", "XL"].map((size, idx) => (
-                  <label key={size} htmlFor={size.toLowerCase()}>
-                    <input type="radio" name="size" id={size.toLowerCase()} />
-                    <span>{size}</span>
+            <div className="details-p notfound-bg">
+              <div className="details-products">
+                {product && (
+                  <>
+                    <h1>{product.title}</h1>
+                    <h2>$ {product.price}</h2>
+                    <h3>20% OFF</h3>
+                    <p>{product.description}</p>
+                  </>
+                )}
+              </div>
+              <form>
+                <div className="size-select">
+                  <p>Size</p>
+                  {["XS", "S", "M", "L", "XL"].map((size, idx) => (
+                    <label key={size} htmlFor={size.toLowerCase()}>
+                      <input type="radio" name="size" id={size.toLowerCase()} />
+                      <span>{size}</span>
+                    </label>
+                  ))}
+                </div>
+                <div className="color-select">
+                  <p>Color</p>
+                  <label htmlFor="black">
+                    <input type="radio" name="color" id="black" />
+                    <span className="color-1"></span>
                   </label>
-                ))}
-              </div>
-              <div className="color-select">
-                <p>Color</p>
-                <label htmlFor="black">
-                  <input type="radio" name="color" id="black" />
-                  <span className="color-1"></span>
-                </label>
-                <label htmlFor="olive">
-                  <input type="radio" name="color" id="olive" />
-                  <span className="color-2"></span>
-                </label>
-                <label htmlFor="purple">
-                  <input type="radio" name="color" id="purple" />
-                  <span className="color-3"></span>
-                </label>
-                <label htmlFor="pink">
-                  <input type="radio" name="color" id="pink" />
-                  <span className="color-4"></span>
-                </label>
-              </div>
-              <div className="quantity-select">
-                <p>Quantity</p>
-                <input
-                  type="number"
-                  value={quantity}
-                  min={1}
-                  id="combobox"
-                  onChange={handleQuantityChange}
-                  style={{ width: "50px", textAlign: "center" }}
-                />
-              </div>
-              <button type="button">Buy Now</button>
-            </form>
+                  <label htmlFor="olive">
+                    <input type="radio" name="color" id="olive" />
+                    <span className="color-2"></span>
+                  </label>
+                  <label htmlFor="purple">
+                    <input type="radio" name="color" id="purple" />
+                    <span className="color-3"></span>
+                  </label>
+                  <label htmlFor="pink">
+                    <input type="radio" name="color" id="pink" />
+                    <span className="color-4"></span>
+                  </label>
+                </div>
+                <div className="quantity-select">
+                  <p>Quantity</p>
+                  <input
+                    type="number"
+                    value={quantity}
+                    min={1}
+                    id="combobox"
+                    onChange={handleQuantityChange}
+                    style={{ width: "50px", textAlign: "center" }}
+                  />
+                </div>
+                <button type="button">Buy Now</button>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Footer */}
       <footer className="footer">

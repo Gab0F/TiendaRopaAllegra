@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ setCurrentPage }) => {
   return (
     <header className="header">
       <nav className="header__container container">
@@ -11,7 +12,9 @@ const Header = () => {
         <ul className="header__links">
           <li className="header__link"><a href="#home" className="active">home</a></li>
           <li className="header__link"><a href="#new">new</a></li>
-          <li className="header__link"><a href="#shop">shop</a></li>
+          <li className="header__link">
+            <a href="#shop" onClick={e => { e.preventDefault(); if (typeof setCurrentPage === 'function') setCurrentPage('productos'); }}>shop</a>
+          </li>
           <li className="header__link"><a href="#trending">trending</a></li>
         </ul>
 
