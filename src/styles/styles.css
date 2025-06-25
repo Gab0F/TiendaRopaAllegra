@@ -17,7 +17,7 @@
     position: fixed;
     top: 0;
     height: var(--header-height);
-    background-color: transparent;
+    background-color: rgba(63, 46, 46, 0.92); /* Un poco más oscuro que blanco, pero no negro */
     transition: background var(--default-duration) ease;
     z-index: 1000;
 }
