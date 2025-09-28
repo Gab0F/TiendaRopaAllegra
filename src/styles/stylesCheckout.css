@@ -11,20 +11,16 @@
 
 
 
-body {
-  background-color: #f5f7ff;
-  color: var(--dark);
-  line-height: 1.6;
-}
+.page-checkout { background-color: #f5f7ff; color: var(--dark); line-height: 1.6; }
 
 /* Layout */
-.container {
+.page-checkout .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.checkout-container {
+.page-checkout .checkout-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -37,7 +33,7 @@ body {
   box-sizing: border-box;
 }
 
-.checkout-form {
+.page-checkout .checkout-form {
   flex: 1;
   min-width: 280px;
   max-width: 20020px;
@@ -46,7 +42,7 @@ body {
   margin-right: auto;
 }
 
-.order-summary {
+.page-checkout .order-summary {
   flex: 0 0 350px;
   max-width: 100%;
   background: white;
@@ -57,7 +53,7 @@ body {
 }
 
 /* Estilos de formularios */
-.form-section {
+.page-checkout .form-section {
   background: white;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -65,7 +61,7 @@ body {
   margin-bottom: 25px;
 }
 
-.section-title {
+.page-checkout .section-title {
   font-size: 1.2rem;
   margin-bottom: 20px;
   padding-bottom: 10px;
@@ -76,18 +72,18 @@ body {
   gap: 10px;
 }
 
-.form-group {
+.page-checkout .form-group {
   margin-bottom: 20px;
 }
 
-label {
+.page-checkout label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
   color: var(--dark);
 }
 
-.form-control {
+.page-checkout .form-control {
   width: 100%;
   max-width: 380px;
   box-sizing: border-box;
@@ -98,24 +94,24 @@ label {
   transition: border-color 0.3s;
 }
 
-.form-control:focus {
+.page-checkout .form-control:focus {
   border-color: var(--primary);
   outline: none;
   box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
 }
 
-.form-row {
+.page-checkout .form-row {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-.form-row .form-group {
+.page-checkout .form-row .form-group {
   flex: 1;
   min-width: 200px;
 }
 
-.checkbox-group {
+.page-checkout .checkbox-group {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -123,13 +119,13 @@ label {
 }
 
 /* Metodos de pago */
-.payment-methods {
+.page-checkout .payment-methods {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
 }
 
-.payment-method {
+.page-checkout .payment-method {
   flex: 1;
   text-align: center;
   padding: 15px;
@@ -139,67 +135,67 @@ label {
   transition: all 0.3s;
 }
 
-.payment-method:hover {
+.page-checkout .payment-method:hover {
   border-color: var(--primary);
 }
 
-.payment-method.active {
+.page-checkout .payment-method.active {
   border-color: var(--primary);
   background-color: rgba(74, 108, 247, 0.05);
 }
 
-.payment-method i {
+.page-checkout .payment-method i {
   font-size: 2rem;
   margin-bottom: 10px;
   color: var(--primary);
 }
 
 /* Resumen de pedido */
-.order-items {
+.page-checkout .order-items {
   margin-bottom: 20px;
 }
 
-.order-item {
+.page-checkout .order-item {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
 }
 
-.order-item:last-child {
+.page-checkout .order-item:last-child {
   border-bottom: none;
 }
 
-.item-name {
+.page-checkout .item-name {
   flex: 2;
 }
 
-.item-price {
+.page-checkout .item-price {
   flex: 1;
   text-align: right;
 }
 
-.order-total {
+.page-checkout .order-total {
   margin-top: 20px;
   padding-top: 15px;
   border-top: 2px solid var(--border);
 }
 
-.total-row {
+.page-checkout .total-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   font-size: 1.1rem;
 }
 
-.total-row.final {
+.page-checkout .total-row.final {
   font-weight: bold;
   font-size: 1.3rem;
   color: var(--primary);
 }
 
 /* Button */
-.btn {
+.page-checkout .btn {
   display: block;
   width: 100%;
   padding: 15px;
@@ -214,16 +210,16 @@ label {
   text-align: center;
 }
 
-.btn:hover {
+.page-checkout .btn:hover {
   background-color: var(--primary-dark);
 }
 
 @media (max-width: 900px) {
-  .checkout-container {
+  .page-checkout .checkout-container {
     flex-direction: column;
     padding: 20px 5px;
   }
-  .order-summary {
+  .page-checkout .order-summary {
     flex: 1;
     max-width: 100%;
     margin-top: 30px;
@@ -231,10 +227,10 @@ label {
 }
 
 @media (max-width: 600px) {
-  .checkout-form, .order-summary {
+  .page-checkout .checkout-form, .page-checkout .order-summary {
     padding: 10px;
   }
-  .checkout-container {
+  .page-checkout .checkout-container {
     padding: 5px;
   }
 }

@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "lora", sans-serif;
-    box-sizing: border-box;
-}
+
+.page-product * { box-sizing: border-box; font-family: "lora", sans-serif; }
 
 
-#container-product{
+.page-product #container-product{
     width: 100%;
     min-height: 150vh;
     background: #fff;
@@ -16,32 +11,32 @@
     justify-content: center;
 }
 
-.product-details{
+.page-product .product-details{
     width: 90%;
     max-width: 750px;
     display: flex;
 }
 
-.gallery{
+.page-product .gallery{
     flex-basis: 47%;
     transform: scale(1.08);
-    box-shadow: -10px 5px, 10px, 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
-.gallery img{
+.page-product .gallery img{
     width: 100%;
     display: block;
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
-.details-p{
+.page-product .details-p{
     flex-basis: 53%;
     background: whitesmoke;
     padding: 120px;
     padding-left: 60px;
-    box-shadow: -10px 5px, 10px, 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.1);
     font-size: 13px;
     font-weight: 500;
     color: #777;
@@ -49,63 +44,63 @@
     margin-bottom: 20px;
 }
 
-.details-p h1{
+.page-product .details-p h1{
     color: #333;
     font-size: 35px;
 }
 
-.details-p h2{
+.page-product .details-p h2{
     color: #555;
     font-size: 30px;
     font-weight: 600;
 }
 
-.details-p h3{
+.page-product .details-p h3{
     color: purple;
     margin-bottom: 10px;
 }
 
-.details-p form{
+.page-product .details-p form{
     font-size: 15px;
     font-weight: 400;
 }
 
-.size-select{
+.page-product .size-select{
     display: flex;
     align-items: center;
     margin-top: 50px;
 }
 
-.size-select p{
+.page-product .size-select p{
     width: 70px;
 }
 
-.size-select input:checked + span{
+.page-product .size-select input:checked + span{
     color: blueviolet;
     font-weight: 600;
 }
 
-.size-select input{
+.page-product .size-select input{
     display: none;
 }
 
-.size-select span{
+.page-product .size-select span{
     padding: 5px;
     margin-right: 10px;
     cursor: pointer;
 }
 
-.color-select{
+.page-product .color-select{
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
 
-.color-select p{
+.page-product .color-select p{
     width: 75px;
 }
 
-.color-select span{
+.page-product .color-select span{
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -114,41 +109,41 @@
     cursor: pointer;
 }
 
-.color-1{
+.page-product .color-1{
     background: black;
 }
 
-.color-2{
+.page-product .color-2{
     background: olive;
 }
 
-.color-3{
+.page-product .color-3{
     background: purple;
 }
 
-.color-4{
+.page-product .color-4{
     background: pink;
 }
 
-.color-select input{
+.page-product .color-select input{
     display: none;
 }
 
-.color-select input:checked + span{
+.page-product .color-select input:checked + span{
     transform: scale(0.7);
     box-shadow: 0 0 0 4px #fff, 0 0 0 6px #000;
 }
 
-.quantity-select{
+.page-product .quantity-select{
     display: flex;
     align-items: center;
     margin-top:  20px;
 }
-.quantity-select p{
+.page-product .quantity-select p{
     width: 75px;
 }
 
-.quantity-select input{
+.page-product .quantity-select input{
     background: #fff;
     border: 0;
     outline: 0;
@@ -157,7 +152,7 @@
     border-radius: 12px;
 }
 
-form button{
+.page-product form button{
     background: #000;
     color:#fff;
     font-size: 17px;
@@ -171,13 +166,13 @@ form button{
     cursor: pointer;
 }
 
-.controls{
+.page-product .controls{
     position: absolute;
     bottom: 120px;
     right: 20px;
 }
 
-.btn{
+.page-product .gallery-dot{
     display: block;
     width: 10px;
     height: 10px;
@@ -185,14 +180,13 @@ form button{
     background: rgba(255, 255, 255, 0.5);
     margin: 10px;
     cursor: pointer;
-
 }
 
-.btn.active{
+.page-product .gallery-dot.active{
     background: blueviolet;
 }
 
-.details-p.notfound-bg, .notfound-bg {
+.page-product .details-p.notfound-bg, .page-product .notfound-bg {
   background: rgba(30, 30, 30, 0.92);
   color: #fff;
   border-radius: 20px;
@@ -201,26 +195,26 @@ form button{
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
 }
 
-.details-p.notfound-bg input,
-.details-p.notfound-bg span,
-.details-p.notfound-bg label,
-.details-p.notfound-bg button {
+.page-product .details-p.notfound-bg input,
+.page-product .details-p.notfound-bg span,
+.page-product .details-p.notfound-bg label,
+.page-product .details-p.notfound-bg button {
   color: #fff;
 }
 
-.details-p.notfound-bg button {
+.page-product .details-p.notfound-bg button {
   background: #000;
   color: #fff;
 }
 
 @media (max-width: 768px) {
-  .product-details {
+    .page-product .product-details {
     flex-direction: column;
     align-items: center;
   }
 
-  .gallery,
-  .details-p {
+    .page-product .gallery,
+    .page-product .details-p {
     max-width: 100%;
   }
 }

@@ -20,8 +20,9 @@ export default function Checkout() {
   };
 
   return (
-    <div className="main-content">
-      {/* Header */}
+    <div className="page-checkout">
+        {/* Header */}
+
 
       {/* Checkout */}
       <div className="checkout-container">
@@ -184,7 +185,6 @@ export default function Checkout() {
       </div>
 
       {/* Footer */}
-
     </div>
   );
 }

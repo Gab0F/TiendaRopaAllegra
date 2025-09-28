@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = ({ setCurrentPage }) => {
+const Header = () => {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (!headerRef.current) return;
+      if (window.scrollY > 80) {
+        headerRef.current.classList.add('is-scrolled');
+      } else {
+        headerRef.current.classList.remove('is-scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <nav className="header__container container">
         <div className="header__logo">
           <h1><Link to="/">Allegra</Link></h1>

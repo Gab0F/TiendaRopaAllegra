@@ -19,11 +19,22 @@
     left: 0;
     width: 100%;
     height: var(--header-height);
+    width: 100%;
+    background-color: var(--header-bg, transparent);
+    backdrop-filter: var(--header-blur, none);
+    transition: background-color var(--default-duration) ease, backdrop-filter var(--default-duration) ease;
+
     z-index: 1000;
     background: rgba(40, 44, 52, 0.7); /* Más claro y translúcido */
     transition: background var(--default-duration) ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     backdrop-filter: blur(4px);
+}
+
+.header.is-scrolled {
+    --header-bg: rgba(255,255,255,0.85);
+    --header-blur: blur(6px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .header__container {

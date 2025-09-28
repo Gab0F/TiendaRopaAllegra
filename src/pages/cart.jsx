@@ -15,43 +15,35 @@ export default function Cart() {
   const navigate = useNavigate();
 
   return (
-    <div className="main-content">
-      <main>
-        <section className="cart-container">
-          <h2>Carrito de Compras</h2>
-          <div className="cart-items">
-            {cartItems.map((product) => (
-              <div className="cart-item" key={product.id}>
-                <img src={product.image} alt={product.title} />
-                <div className="item-details">
-                  <h3>{product.title}</h3>
-                  <p>
-                    <strong>Categoría:</strong> {product.category}
-                  </p>
-                  <p>
-                    <strong>Nuevo:</strong> {product.isNew ? "Sí" : "No"}
-                  </p>
-                  <p>Talla: M</p>
-                  <p>Color: Negro</p>
-                  <p>
-                    Precio: $<span className="item-price">{product.price}</span>
-                  </p>
-                  <div className="item-quantity">
-                    <label htmlFor={`qty-${product.id}`}>Cantidad:</label>
-                    <input
-                      type="number"
-                      id={`qty-${product.id}`}
-                      value={product.quantity}
-                      min="1"
-                      onChange={(e) => updateQuantity(product.id, parseInt(e.target.value, 10))}
-                    />
-                  </div>
-                  <button
-                    className="remove-item"
-                    onClick={() => removeItem(product.id)}
-                  >
-                    Eliminar
-                  </button>
+    <main className="page-cart">
+      <section className="cart-container">
+        <h2>Carrito de Compras</h2>
+        <div className="cart-items">
+          {cartItems.map((product) => (
+            <div className="cart-item" key={product.id}>
+              <img src={product.image} alt={product.title} />
+              <div className="item-details">
+                <h3>{product.title}</h3>
+                <p>
+                  <strong>Categoría:</strong> {product.category}
+                </p>
+                <p>
+                  <strong>Nuevo:</strong> {product.isNew ? "Sí" : "No"}
+                </p>
+                <p>Talla: M</p>
+                <p>Color: Negro</p>
+                <p>
+                  Precio: $<span className="item-price">{product.price}</span>
+                </p>
+                <div className="item-quantity">
+                  <label htmlFor={`qty-${product.id}`}>Cantidad:</label>
+                  <input
+                    type="number"
+                    id={`qty-${product.id}`}
+                    value={product.quantity}
+                    min="1"
+                    onChange={(e) => updateQuantity(product.id, parseInt(e.target.value, 10))}
+                  />
                 </div>
               </div>
             ))}

@@ -85,7 +85,7 @@ export default function ProductDress() {
     );
 
   return (
-    <div>
+    <div className="page-product">
       {/* Header */}
       <header className="header">
         <nav className="header__container container">
@@ -152,13 +152,34 @@ export default function ProductDress() {
         </nav>
       </header>
 
-      {/* Contenido principal */}
-      <div className="main-content">
-        {/* Product details */}
-        <section id="container-product">
-          <div className="product-details">
-            <div className="gallery">
-              {images.length > 0 && (
+
+      {/* Product details */}
+      <section id="container-product">
+        <div className="product-details">
+          <div className="gallery">
+            {images.length > 0 && (
+              <>
+                <img
+                  src={images[imgIndex]}
+                  alt={product?.title}
+                  id="productImg"
+                />
+                <div className="controls">
+                  {images.map((img, idx) => (
+                    <span
+                      key={idx}
+                      className={`gallery-dot${imgIndex === idx ? " active" : ""}`}
+                      onClick={() => handleImgChange(idx)}
+                    ></span>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+          <div className="details-p notfound-bg">
+            <div className="details-products">
+              {product && (
+
                 <>
                   <img
                     src={images[imgIndex]}
