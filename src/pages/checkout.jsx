@@ -23,6 +23,7 @@ export default function Checkout() {
     <div className="page-checkout">
         {/* Header */}
 
+
       {/* Checkout */}
       <div className="checkout-container">
         {/* Left Column: Checkout Form */}

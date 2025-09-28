@@ -45,34 +45,28 @@ export default function Cart() {
                     onChange={(e) => updateQuantity(product.id, parseInt(e.target.value, 10))}
                   />
                 </div>
-                <button
-                  className="remove-item"
-                  onClick={() => removeItem(product.id)}
-                >
-                  Eliminar
-                </button>
               </div>
+            ))}
+          </div>
+          <div className="cart-summary">
+            <div className="summary-row">
+              <span>Subtotal:</span>${subtotal.toFixed(2)}
             </div>
-          ))}
-        </div>
-        <div className="cart-summary">
-          <div className="summary-row">
-            <span>Subtotal:</span>${subtotal.toFixed(2)}
+            <div className="summary-row">
+              <span>Envío:</span>${shipping.toFixed(2)}
+            </div>
+            <div className="summary-row total">
+              <span>Total:</span>${total.toFixed(2)}
+            </div>
+            <button
+              className="checkout-button"
+              onClick={() => navigate('/checkout')}
+            >
+              Proceder al Pago
+            </button>
           </div>
-          <div className="summary-row">
-            <span>Envío:</span>${shipping.toFixed(2)}
-          </div>
-          <div className="summary-row total">
-            <span>Total:</span>${total.toFixed(2)}
-          </div>
-          <button
-            className="checkout-button"
-            onClick={() => navigate('/checkout')}
-          >
-            Proceder al Pago
-          </button>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
   );
 }
