@@ -85,7 +85,7 @@ export default function ProductDress() {
     );
 
   return (
-    <div>
+    <div className="page-product">
       {/* Header */}
       <header className="header">
         <nav className="header__container container">
@@ -167,9 +167,7 @@ export default function ProductDress() {
                   {images.map((img, idx) => (
                     <span
                       key={idx}
-                      className={`btn${
-                        imgIndex === idx ? " active" : ""
-                      }`}
+                      className={`gallery-dot${imgIndex === idx ? " active" : ""}`}
                       onClick={() => handleImgChange(idx)}
                     ></span>
                   ))}

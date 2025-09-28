@@ -1,17 +1,8 @@
 /* Estilos básicos para el cuerpo y la fuente */
-body {
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+.page-cart { font-family: 'Playfair Display', serif; background-color: #ffffff; color: #000; }
 
 /* Estilos para el encabezado */
-header {
+.page-cart header {
     display: flex;
     justify-content: space-between;
     padding: 5px 0 5px 0;
@@ -19,7 +10,7 @@ header {
     z-index: 1;
 }
 
-header .logo {
+.page-cart header .logo {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     margin: 0;
@@ -29,35 +20,35 @@ header .logo {
     color: #000000;
 }
 
-header .container {
+.page-cart header .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header .container-icon {
+.page-cart header .container-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 }
 
-.icon-cart {
+.page-cart .icon-cart {
     width: 40px;
     height: 40px;
     stroke: #000;
 }
 
-.icon-cart:hover {
+.page-cart .icon-cart:hover {
     cursor: pointer;
 }
 
-.icon-user {
+.page-cart .icon-user {
     width: 40px;
     height: 40px;
 }
 
-.count-products {
+.page-cart .count-products {
     position: absolute;
     top: 55%;
     background-color: #000;
@@ -76,27 +67,27 @@ header .container-icon {
 
 
 @media(min-width:720px) {
-    header {
+  .page-cart header {
       position: fixed;  
       width: 100%;
       top: 0;
 
         
     }
-    header .container {
+  .page-cart header .container {
         flex-direction: row;
         justify-content: space-between;
     }
-    header .container-icon {
+  .page-cart header .container-icon {
         flex-direction: row;
     }
-    header nav {
+  .page-cart header nav {
         flex-direction: row;
         padding-bottom: 0;
         padding-right: 30px;
     }
 
-    footer {
+  .page-cart footer {
         position: static;
         width: 100%;
         left: 0;
@@ -111,7 +102,7 @@ header .container-icon {
 }
 
 /* Estilos para el contenedor principal del carrito */
-.cart-container {
+.page-cart .cart-container {
   max-width: 900px;
   margin: 2rem auto;
   margin-top: 120px;
@@ -123,19 +114,19 @@ header .container-icon {
 
 
 
-.cart-container h2 {
+.page-cart .cart-container h2 {
   text-align: center;
   color: #000000;
   margin-bottom: 1.5rem;
 }
 
 /* Estilos para los artículos individuales en el carrito */
-.cart-items {
+.page-cart .cart-items {
   border-top: 1px solid #eee;
   padding-top: 1.5rem;
 }
 
-.cart-item {
+.page-cart .cart-item {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -143,12 +134,12 @@ header .container-icon {
   border-bottom: 1px solid #eee;
 }
 
-.cart-item:last-child {
+.page-cart .cart-item:last-child {
   border-bottom: none;
   padding-bottom: 0;
 }
 
-.cart-item img {
+.page-cart .cart-item img {
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -157,43 +148,43 @@ header .container-icon {
   border: 1px solid #ddd;
 }
 
-.item-details {
+.page-cart .item-details {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.item-details h3 {
+.page-cart .item-details h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   color: #000000;
 }
 
-.item-details p {
+.page-cart .item-details p {
   margin: 0.3rem 0;
   color: #000000;
   font-size: 0.9rem;
 }
 
-.item-details .item-price {
+.page-cart .item-details .item-price {
   font-weight: bold;
   color: #000000;
 }
 
-.item-quantity {
+.page-cart .item-quantity {
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
 }
 
-.item-quantity label {
+.page-cart .item-quantity label {
   margin-right: 0.5rem;
   font-size: 0.9rem;
   color: #000000;
 }
 
-.item-quantity input[type="number"] {
+.page-cart .item-quantity input[type="number"] {
   width: 60px;
   padding: 0.5rem;
   border: 1px solid #ccc;
@@ -202,7 +193,7 @@ header .container-icon {
   background-color: #f2f2f2;
 }
 
-.remove-item {
+.page-cart .remove-item {
   background-color: #dc3545;
   color: #fff;
   border: none;
@@ -219,11 +210,11 @@ header .container-icon {
   text-align: center;
 }
 
-.remove-item:hover {
+.page-cart .remove-item:hover {
   background-color: #c82333;
 }
 
-.item-details {
+.page-cart .item-details {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -231,12 +222,12 @@ header .container-icon {
 }
 
 @media (min-width: 600px) {
-  .item-details {
+  .page-cart .item-details {
     flex-direction: row;
     align-items: center;
     gap: 1.5rem;
   }
-  .remove-item {
+  .page-cart .remove-item {
     margin-top: 0;
     margin-left: 1.5rem;
     width: auto;
@@ -246,14 +237,14 @@ header .container-icon {
 }
 
 /* Estilos para el resumen del carrito */
-.cart-summary {
+.page-cart .cart-summary {
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid #eee;
   text-align: right;
 }
 
-.summary-row {
+.page-cart .summary-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.8rem;
@@ -261,12 +252,12 @@ header .container-icon {
   color : #000000;
 }
 
-.summary-row span:first-child {
+.page-cart .summary-row span:first-child {
   font-weight: bold;
   color: #000000;
 }
 
-.summary-row.total {
+.page-cart .summary-row.total {
   font-size: 1.4rem;
   font-weight: bold;
   color: #000000;
@@ -275,7 +266,7 @@ header .container-icon {
   margin-top: 1rem;
 }
 
-.checkout-button {
+.page-cart .checkout-button {
   background-color: #28a745;
   color: #fff;
   border: none;
@@ -292,12 +283,12 @@ header .container-icon {
   margin-right: auto;
 }
 
-.checkout-button:hover {
+.page-cart .checkout-button:hover {
   background-color: #218838;
 }
 
 /* Estilos para el pie de página */
-footer {
+.page-cart footer {
     font-size: 0.5vw;
     width: 100%;
     position: static;
@@ -311,19 +302,17 @@ footer {
   font-size: 0.9rem;
 }
 
-footer p {
+.page-cart footer p {
     margin: 0;
     padding: 12px;
     color: rgb(100, 100, 100)
 }
 
-footer .container {
+.page-cart footer .container {
     height: 150 px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-html, body {
-    height: 100%;
-}
+.page-cart html, .page-cart body { height: auto; }

@@ -15,7 +15,7 @@ export default function Cart() {
   const navigate = useNavigate();
 
   return (
-    <main>
+    <main className="page-cart">
       <section className="cart-container">
         <h2>Carrito de Compras</h2>
         <div className="cart-items">

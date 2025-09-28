@@ -17,9 +17,17 @@
     position: fixed;
     top: 0;
     height: var(--header-height);
-    background-color: rgba(63, 46, 46, 0.92); /* Un poco más oscuro que blanco, pero no negro */
-    transition: background var(--default-duration) ease;
+    width: 100%;
+    background-color: var(--header-bg, transparent);
+    backdrop-filter: var(--header-blur, none);
+    transition: background-color var(--default-duration) ease, backdrop-filter var(--default-duration) ease;
     z-index: 1000;
+}
+
+.header.is-scrolled {
+    --header-bg: rgba(255,255,255,0.85);
+    --header-blur: blur(6px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .header__container {
